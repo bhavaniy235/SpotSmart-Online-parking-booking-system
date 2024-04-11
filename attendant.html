@@ -1,0 +1,50 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Parking Attendants</title>
+    <link rel="stylesheet" type="text/css" href="attendant.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Parking Attendants</h1>
+
+        <table id="attendantTable">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Name</th>
+                    <th>Email</th>
+                    <th>Phone</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Attendant data will be displayed here -->
+            </tbody>
+        </table>
+
+        <div id="editModal" class="modal">
+            <div class="modal-content">
+                <span class="close" id="closeModal">&times;</span>
+                <h2>Edit Attendant</h2>
+                <form id="editForm">
+                    <input type="hidden" id="attendantId" name="attendantId">
+                    <label for="attendantName">Name:</label>
+                    <input type="text" id="attendantName" name="attendantName" required><br><br>
+                    <label for="attendantEmail">Email:</label>
+                    <input type="email" id="attendantEmail" name="attendantEmail" required><br><br>
+                    <label for="attendantPhone">Phone:</label>
+                    <input type="tel" id="attendantPhone" name="attendantPhone" required><br><br>
+                    <button type="submit">Save</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script src="attendant.js"></script>
+</body>
+</html>
+
+

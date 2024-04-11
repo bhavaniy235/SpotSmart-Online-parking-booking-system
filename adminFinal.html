@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AdminDashboard</title>
+    <!--MATERIAL CDN-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Sharp" rel="stylesheet">
+    <!--STYLESHEET-->
+    <link rel="stylesheet" href="adminFinal.css">
+</head>
+
+<body>
+    <div class="container">
+        <aside>
+            <div class="top">
+                <div class="logo">
+                    <img src="logo.jpg">
+                </div>
+            </div>
+            <div class="sidebar">
+                <a href="#"><span class="material-icons-sharp">grid_view</span>
+                    <h3>Dashboard</h3>
+                </a>
+                <a href="request2.html"><span class="material-icons-sharp">request_quote</span>
+                    <h3>Requests</h3>
+                </a>
+                <a href="accept.php" class="btn1"><span class="material-icons-sharp">check</span>
+                    <h3>Accepted</h3>
+                </a>
+                <a href="reject.php"><span class="material-icons-sharp">close</span>
+                    <h3>Rejected</h3>
+                </a>
+                <a href="attendant.html" class="btn4"><span class="material-icons-sharp">diversity_3</span>
+                    <h3>Attendants</h3>
+                </a>
+                <a href="compliants.php" class="btn2"><span class="material-icons-sharp">chat</span>
+                    <h3>Compliants</h3>
+                </a>
+                <a href="adminLogin.php"><span class="material-icons-sharp">logout</span>
+                    <h3>Logout</h3>
+                </a>
+            </div>
+        </aside>
+        <!------------------END OF ASIDE------------------------>
+        <main>
+            <h1>Dashboard</h1>
+            <div class="insights">
+                <div class="slots">
+                    <span class="material-icons-sharp">apartment</span>
+                    <div class="middle">
+                        <div class="left">
+                            <h3>Total Slots</h3>
+                            <h1>150</h1>
+                        </div>
+                        <div class="progress">
+                            <svg>
+                                <circle cx='38' cy='38' r='36'></circle>
+                            </svg>
+                            <div class="number">
+                                <p>100%</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!---------------------END OF SLOTS--------------------------->
+                <div class="Onlineslots">
+                    <span class="material-icons-sharp">book_online</span>
+                    <div class="middle">
+                        <div class="left">
+                            <h3>Total Online Slots</h3>
+                            <h1>120</h1>
+                        </div>
+                        <div class="progress">
+                            <svg>
+                                <circle cx='38' cy='38' r='36'></circle>
+                            </svg>
+                            <div class="number">
+                                <p>80%</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--------------END OF ONLINE SLOTS----------------->
+                <div class="Offlineslots">
+                    <span class="material-icons-sharp">offline_share</span>
+                    <div class="middle">
+                        <div class="left">
+                            <h3>Total Offline Slots</h3>
+                            <h1>30<h1>
+                        </div>
+                        <div class="progress">
+                            <svg>
+                                <circle cx='38' cy='38' r='36'></circle>
+                            </svg>
+                            <div class="number">
+                                <p>20%</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-----------------END OF OFFLINE SLOTS------------------>
+            </div>
+            <!-----------------END OF INSIGHTS------------------->
+
+            <div class="recent-booking">
+                <h2>Recent Bookings</h2>
+                <table id="acceptedTable">
+                    <thead>
+                        <tr>
+                            <th>BookingID</th>
+                            <th>Customer Name</th>
+                            <th>Contact</th>
+                            <th>Vehicle Number</th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody id="acceptedTableBody">
+
+                    </tbody>
+                </table>
+                <a href="accept.php">Show All</a>
+        </main>
+        <!-----------------------END OF MAIN--------------------->
+
+        <div class="right">
+            <div class="top">
+                <button id="menu-btn">
+                    <span class="material-icons-sharp">menu</span>
+                </button>
+                <!--- <div class="theme-toggler" id="mode">
+               <span class="material-icons-sharp active">light_mode</span>
+               <span class="material-icons-sharp">dark_mode</span>
+            </div>----->
+                <div class="profile">
+                    <div class="info">
+                        <p>Hey,<b> SPOTSMART</b></p>
+                        <small class="text-muted">Admin</small>
+                    </div>
+
+                </div>
+            </div>
+            <!---------------END OF TOP-------------------->
+
+            <!-------------------END OF RECENT UPDATES----------------------->
+
+        </div>
+    </div>
+    <script>
+        // Modify the URL based on your file structure
+        fetch('fetch_accepted_data.php')
+            .then(response => response.json())
+            .then(data => {
+                // Process and display the first five rows from the accepted table
+                const acceptedTableBody = document.getElementById('acceptedTableBody');
+                data.forEach(rowData => {
+                    const row = document.createElement('tr');
+                    Object.values(rowData).forEach(value => {
+                        const cell = document.createElement('td');
+                        cell.textContent = value;
+                        row.appendChild(cell);
+                    });
+                    acceptedTableBody.appendChild(row);
+                });
+            })
+            .catch(error => console.error('Error fetching accepted data:', error));
+    </script>
+
+</body>
+
+</html>

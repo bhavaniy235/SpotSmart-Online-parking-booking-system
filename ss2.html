@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+   <meta name="viewport" content:"width=device-width, initial-scale=1.0">
+   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script src="https://use.fontawesome.com/releases/v6.1.0/js/all.js" crossorigin="anonymous"></script>
+   <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css" />
+   <link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css" />
+   <title>SPOTSMART</title>
+   <link rel="stylesheet" type="text/css" href="ss2.css">
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"/>-->
+    <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css"/>
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <!-- code for linking css file -->
+        <link rel="stylesheet" type="text/css" href="ss2.css">
+</head>
+
+<body>
+  <header class="header">
+    <a href="#" class="logo"><img src="Images/logo.jpg"></a>
+    <nav class="navbar navbar-expand-lg">
+     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+         <span class="navbar-toggler-icon"></span>
+     </button>
+     <div class="collapse navbar-collapse" id="navbarNav">
+         <ul class="navbar-nav">
+             <li class="nav-item">
+                 <a class="nav-link" href="Login.php"><u>LOGIN/SIGNUP</u></a>
+             </li>
+             <li class="nav-item">
+                 <a class="nav-link" href="#home">HOME</a>
+             </li>
+             <li class="nav-item">
+                 <a class="nav-link" href="#features">HOW IT WORKS</a>
+             </li>
+             <li class="nav-item">
+                 <a class="nav-link" href="#contact">CONTACT</a>
+             </li>
+         </ul>
+     </div>
+ </nav>
+  </header>
+   <section class="home" id="home">
+      <div class="container">
+        <div class="home-content">
+        <h1>Hiii Users!!</h1>
+        <h3>Welcome to the <b>"SPOTSMART"<b></h3>
+        <p> Are you confused to find a parking slot for your vehicle?<br>
+        Don't worry 😉️  !! We are here to help you!!<br>
+        Log in/sign up into "SpotSmart" and prebook your slot through online from your home itself ...!<br></p></div>
+        <div class="rightt"> 
+       </div>
+     </div>
+     </div>
+      <!-- <div>
+       You decide where, when to park and which car park suits you best. You save money, you save time. And you realise that parking can be fast, easy and you always arrive on time</div>-->
+</section>
+<section class="features" id="features">
+        <h1 class="heading">How does it Works ?</h1><br/></br>
+         <div class="box-container">
+            <div class="box">
+                <img src="Images/slotfind.jpeg" width="300px" height="100px">
+                 <h2><b>Finding your slot</b></h2>
+            <p>Login/Signup to SpotSmart and select your slot<p>
+                
+            </div>
+            <div class="box">
+                <img src="Images/payment.webp" width="300px" height="600px">
+                <h2><b>Slot Booking</b></h2>
+            <p>Book the selected slot at a good price</p>
+            </div>
+            <div class="box">
+            <img src="Images/eligible.png" width="300px" height="100px">
+            <h2><b>Eligibility</b></h2>
+            <p>Show your reservation when you arrive at the parking slot<p> 
+            </div>
+         </div><br/><br/><br/>
+</section>
+<section class="contact" id="contact">
+  <div class="container">
+    <div class="content">
+      <div class="left-side">
+        <div class="address details">
+          <i class="fas fa-map-marker-alt"></i>
+          <div class="topic">Address</div>
+          <div class="text-one">Dilsukhnagar main rd</div>
+          <div class="text-two">Hyderabad</div>
+        </div>
+        <div class="phone details">
+          <i class="fas fa-phone-alt"></i>
+          <div class="topic">Phone</div>
+          <div class="text-one">+91 99110 05647</div>
+          <div class="text-two">+91 94949 46078</div>
+        </div>
+        <div class="email details">
+          <i class="fas fa-envelope"></i>
+          <div class="topic">Email</div>
+          <div class="text-one">spotsmartweb@gmail.com</div>
+          </div>
+      </div>
+      <div class="right-side">
+         <h1>Contact</h1>
+        <p>How can we help?</p><br><br>
+        <div class="topic-text">Send us a message</div>
+        <p>If you have any doubts or if you want to extend your parking time,you can send message to us.</p>
+        <form id="bookingForm" action="message.php" action="post">
+          <div class="input-box">
+              <input type="text" id="bookingID" placeholder="Enter your Booking ID" required>
+          </div>
+          <div class="input-box">
+              <input type="text" id="email" placeholder="Enter your email" required>
+          </div>
+          <div class="input-box">
+              <input type="text" id="contactNumber" placeholder="Enter your contact number" required>
+          </div>
+          <div class="input-box message-box">
+              <textarea id="message" placeholder="Type your message here" required></textarea>
+          </div>
+          <div class="button">
+              <input type="button" value="Send Now" onclick="submitForm()">
+          </div>
+      </form>
+       </div>
+    </div>
+  </div>
+  <script>
+    function submitForm() {
+        var bookingID = document.getElementById("bookingID").value;
+        var email = document.getElementById("email").value;
+        var contactNumber = document.getElementById("contactNumber").value;
+        var message = document.getElementById("message").value;
+      
+
+        // Send the data to the server using AJAX
+        var xhr = new XMLHttpRequest();
+        xhr.open("POST", "message.php", true);
+        xhr.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+        xhr.onreadystatechange = function () {
+            if (xhr.readyState == 4 && xhr.status == 200) {
+                // Handle the response from the server if needed
+                console.log(xhr.responseText);
+            }
+        };
+
+        var data = "bookingID=" + encodeURIComponent(bookingID) +
+                   "&email=" + encodeURIComponent(email) +
+                   "&contactNumber=" + encodeURIComponent(contactNumber) +
+                   "&message=" + encodeURIComponent(message);
+
+        xhr.send(data);
+    }
+</script>
+</body>
+</html>
+</section>
+</body>
+

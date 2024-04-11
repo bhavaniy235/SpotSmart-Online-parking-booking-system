@@ -1,0 +1,120 @@
+body{
+    background-image:url("Smp.jpg");
+    background-size:cover; 
+}
+h1{
+    color:#f2f5f8
+}
+.head{
+    color:black;
+    font-family:'Poppins',sans-serif;
+}
+label{
+    font-family:'Poppins',sans-serif;
+}
+h2{
+    color:rgb(35, 20, 175);
+}
+.price{
+    color:rgb(35, 20, 175);
+}
+.form-control{
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+.forbg{
+    background: #fff;
+    border-radius: 6px;
+    padding: 20px 60px 30px 40px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+    border: 5px;
+}
+.forborder{
+    border: 2px solid rgb(39, 38, 38);
+    padding: 10px 40px;
+    border-radius:6px;
+}
+.nobg{
+    background: #fff;
+    border-radius: 6px;
+    padding: 20px 60px 30px 40px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+    border: 1px solid rgb(85, 84, 84);
+}
+    
+.slot-container {
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin-bottom: 20px;
+}
+
+.slot {
+    display: block;
+    margin-bottom: 10px;
+}
+
+.container2 {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h2 .user2{
+    text-align: center;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    margin-bottom: 8px;
+}
+
+input[type="text"] {
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+input[type="tel"] {
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+input[type="submit"] {
+    background-color: #007BFF;
+    color: #fff;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+input[type="submit"]:hover {
+    background-color: #0056b3;
+}
+#nextButton{
+    background-color: #007BFF;
+    color: #fff;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    align-items: right;
+    width:100px;
+}
+#nextButton:hover{
+    background-color: #0056b3;
+}
+/* Add this at the end of your existing CSS */
+
